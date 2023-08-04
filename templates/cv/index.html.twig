@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cabine du capitaine{% endblock %}
+
+{% block body %}
+
+{% include "header.html.twig" %}
+
+<main class="bckg_cv">
+
+    <section class="hub">
+        <div class="appel title_cv">
+            <h1>Voici la cabine gouverneur.</h1>
+            <h2>C'est ici que je gère mon vaisseau et les missions</h2>
+        </div>
+    
+        <span>La pièce étant un sacré bazar, il est difficile de s'y retrouver... 
+            En jetant un coup d'oeil, vous tombez sur un avis de recherche manquant de s'envoler par la fenêtre. </span>
+    
+        <div class="contain_block">
+            <img src="/public/assets/media/img/tf_card.png" alt="Twisted Fate" class="">
+            <div class="bubble left">
+                <h3>"Vous avez l'oeil, on recherche ce gars depuis un moment, une belle prime nous attends ahah !</h3>
+                <p>Regardez donc, on a toutes ces infos... 'Nous reste plus qu'à l'trouver"</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cabin">
+        <i>Clique sur l'avis pour voir les infos...</i>
+        <section class="flex-on-mobile">
+            <!-- Utilisez une div pour créer un overlay en plein écran -->
+            <div id="overlay" onclick="hideFullScreenImage()">
+                <!-- Bouton pour télécharger le CV en PDF -->
+                <div class="downloadContainer" id="downloadButton">
+                    <a href="/public/assets/media/pdf/Mon CV.pdf" download="Mon_CV.pdf">
+                      <span>Download</span>
+                      <img src="/public/assets/media/img/download.png" alt="download">
+                    </a>
+                  </div>
+                <div class="closeCv" id="cvOverlay">
+                      <img src="/public/assets/media/img/close.png" alt="close">
+                      <button onclick="hideOverlay()"><span>Fermer</span></button>
+                </div>
+                <!-- Placez l'image "Mon CV" à l'intérieur de l'overlay -->
+                <img src="/public/assets/media/img/Mon CV.png" alt="Mon CV" id="fullScreenImage">
+            </div>    
+            <!-- L'image "Wanted" avec l'attribut onclick pour afficher l'overlay -->
+            <img src="/public/assets/media/img/Wanted.png" alt="card wanted" class="center_img zoom".
+            onclick="showFullScreenImage()" id="showFullScreenImage">  
+        </section>
+    </section>
+
+</main>
+
+{% include "footer.html.twig" %}
+
+{% endblock %}

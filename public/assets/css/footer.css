@@ -1,0 +1,79 @@
+footer{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    background-image: url(../media/img/footer_wallpaper.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #085441;
+    opacity: 0.9;
+    background-position-y: -100px;
+    align-items: center;
+    box-shadow: rgba(10, 111, 86, 0.2) 0px 7px 29px 0px;
+}
+footer ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+footer li{
+    justify-content: space-around;
+    margin-right: 60px;
+}
+footer a{
+    margin-right: 20px;
+    padding-left: 15px;
+}
+footer h5{
+    font-family: 'Lugrasimo', cursive;
+    color: #ffffff;
+    letter-spacing: 5px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 30px;
+    padding: 25px;
+    position: relative;
+    z-index: 3;
+    line-height: 45px;
+}
+footer button{
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+}
+footer .contain{
+    width: 150%;
+}
+footer .aCard{
+    width: 100%;
+    height: 80px;
+}
+footer img{
+    width: 200%;
+}
+  /* CSS pour les écrans plus larges que 768px (tablettes et ordinateurs) */
+  @media screen and (min-width: 1024px) {
+    footer .aCard{
+        width: 30%;
+        height: 60px;
+        position: relative;
+        bottom: 20px;
+        left: 50%;
+    }
+    footer .contain{
+        width: 100%;
+    }
+    footer img{
+        width: 100%;
+    }
+    footer{
+        background-image: url(../media/img/footer_wallpaper.jpg);
+        background-size: 100%;
+        background-position-y: -450px;
+        opacity: 1;
+    }
+  }

@@ -1,0 +1,169 @@
+.pont{
+  background:#37806C;
+  background: linear-gradient(360deg,#214539,#37806C);
+}
+.appel{
+  padding-top: 30px;
+}
+.appel h1{
+  margin: 10px;
+}
+h1, h2, h3, h4, span {
+    font-family: 'Lugrasimo', cursive;
+    letter-spacing: 5px;
+    text-align: center;
+    line-height: 30px;
+}
+p{
+  font-family: 'Libre Baskerville', serif;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 24px;
+  font-style: italic;
+  margin: 2%;
+}
+.equipage{
+    width: 48%;
+    display: none;
+}
+/* Card */
+.card {
+    padding: 5%;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgb(5, 140, 90);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315deg,#43b5bd,#2ef0c0);
+  }
+  .card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315deg,#43b5bd,#2ef0c0);
+    filter: blur(30px);
+  }
+  .card .black {
+    position: absolute;
+    inset: 6px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    opacity: 1;
+  }
+  .card .content {
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .content .title {
+    color: #fff;
+    font-weight: 500;
+    line-height: 1em;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .content .title span {
+    font-weight: 300;
+    font-size: 0.70em;
+  }
+  .content h3, .content h4, .content li{
+    font-size: 24px;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: auto;
+  }
+  .contain{
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  .aCard{
+    font-style: normal;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    margin: 2%;
+    color: #DCB253;
+  }
+  main ul, main li{
+    list-style: none;
+    color: antiquewhite;
+  }
+  .mobile-only {
+    display: block;
+  }
+  .desktop-only {
+    display: none;
+  }
+  /* CSS pour les écrans plus larges que 768px (tablettes et ordinateurs) */
+  @media screen and (min-width: 1024px) {
+    /* Rétablir l'affichage des images avec la classe "equipage" */
+    .equipage {
+      display: block; /* ou display: inline-block; selon le besoin d'affichage */
+    }
+    /* Rétablir la taille d'origine des cards */
+    .card {
+      width: 90%; /* Remplacez cette valeur par la taille d'origine souhaitée */
+    }
+    .mobile-only {
+      display: none;
+    }
+    .desktop-only {
+      display: block;
+    }
+    .content span {
+      visibility: hidden; 
+      display: block;
+      overflow: hidden;
+      max-height: 1000px; /* Réglez cette valeur en fonction de la hauteur maximale de votre texte */
+      transition: max-height 4s; /* Ajoutez une transition pour un effet en douceur */
+    }
+    .card:hover .content span {
+      visibility: visible;
+      max-height: 1000px; /* Affichez le texte complètement lors du survol */
+    }
+    .card:not(:hover), .content span:not(:hover){
+      transition: max-height 4s;
+      visibility: visible;
+    }
+    .card:not(:hover) .content span {
+      max-height: 0; /* Masquez le texte en réduisant la hauteur */
+    }
+    .tresormap {
+      position: absolute;
+      inset: 6px;
+      z-index: 2;
+      background: url('../media/img/tresormap.jpg') center center no-repeat;
+      background-size: cover;
+      opacity: 0;
+      transition: opacity 2s;
+    }
+  
+    .tresormap:hover {
+      opacity: 0.3;
+    }
+  }
+  

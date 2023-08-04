@@ -1,0 +1,58 @@
+<div class="overlay-menu-mobile" onclick="closeMenuMobile()">
+</div>
+<header class="header">
+    <div class="header__logo">
+        <img src="../public/assets/media/img/Capitaine.png" alt="Capitaine Ne3ko" class="profil_img">
+
+        <i>The Black Tide</i>
+
+        <nav class="header__nav">
+            <div class="header__nav__close" onclick="closeMenuMobile()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </div>
+            <ul class="header__nav__menu">
+                <li class="header__nav__menu__link">
+                    <a href="{{ path('app_home_page') }}">
+                        <img src="../public/assets/media/img/home.png" alt="Home" class="svg">Accueil</a>
+                </li>
+
+                <li class="header__nav__menu__link">
+                    <a href="{{ path('app_cv') }}">
+                        <img src="../public/assets/media/img/cv.png" alt="CV" class="svg">Mon CV</a>
+                </li>
+
+                <li class="header__nav__menu__link">
+                    <a href="{{ path('app_portfolio') }}">
+                        <img src="../public/assets/media/img/portfolio.png" alt="CV" class="svg">Portfolio</a>
+                </li>
+
+                <li class="header__nav__menu__link">
+                    <a href="{{ path('app_decouvre_moi') }}">
+                        <img src="../public/assets/media/img/trésor.png" alt="CV" class="svg">Découvrez moi</a>
+                </li>
+                
+                <ul id="language">
+                    <li id="langues" class="header__nav__menu__link"><img src="../public/assets/media/img/langues.png" alt="CV" class="svg">Langues</li>
+                    <li class="menu-deroulant">
+                        <button id="frButton"><img src="../public/assets/media/img/français.png" alt="français"></button>
+                        <ul class="sous-menu">
+                            <li><button id="enButton"><img src="../public/assets/media/img/english.png" alt="english"></button></li>
+                        </ul>
+                    </li>
+                </ul>
+            </ul>
+        </nav>
+        
+        <div class="header__burger" onclick="openMenuMobile()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </div>
+    </div>
+</header>
+
+

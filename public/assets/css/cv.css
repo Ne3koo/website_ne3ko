@@ -1,0 +1,234 @@
+.bubble {
+    --r: 20px; /* the radius */
+    --t: 5px; /* the size of the tail */
+
+    max-width: 100%;
+    padding: calc(2*var(--r)/3);
+    -webkit-mask: 
+        radial-gradient(var(--t) at var(--_d) 0,#0000 98%,#000 102%) 
+        var(--_d) 100%/calc(100% - var(--r)) var(--t) no-repeat,
+        conic-gradient(at var(--r) var(--r),#000 75%,#0000 0) 
+        calc(var(--r)/-2) calc(var(--r)/-2) padding-box, 
+        radial-gradient(50% 50%,#000 98%,#0000 101%) 
+        0 0/var(--r) var(--r) space padding-box;
+    background: linear-gradient(315deg,#43b5bd,#2ef0c0) border-box;
+}
+.left {
+    --_d: 0%;
+    border-left: var(--t) solid #0000;
+    margin-right: var(--t);
+    place-self: start;
+    color: black;
+}
+.bckg_cv{
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    color: white;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    background-color: #37806C;
+}
+.bckg_cv span{
+    font-size: 24px;
+}
+.contain_block{
+    display: block;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.title_cv{
+    margin-bottom: 30px;
+}
+.cabin{
+    display: block;
+    width: 100%;
+    margin: auto;
+    background-image: url(../media/img/captain_hub.jpg);
+    background-repeat: no-repeat;
+    background-size: 200%;
+}
+.center_img{
+    display: block;
+    margin: auto;
+    padding-bottom: 2%;
+    margin-top: 2%;
+    cursor: pointer;
+}
+.overlay{
+    display: none;
+}
+.hide-on-mobile{
+    display: none;
+}
+.flex-on-mobile{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.flex-on-mobile .mobile-only{
+    width: 800px;
+    height: 830px;
+}
+/* Appliquez du style à l'overlay */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Appliquez du style à l'image "Mon CV" en plein écran */
+  #fullScreenImage {
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+  }
+  
+  /* Appliquez du style au bouton de téléchargement */
+  #downloadButton {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #37806C;
+    color: #DCB253;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 10000;
+    cursor: pointer;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    width: 400px;
+    height: 150px;
+    text-align: center;
+}
+#downloadButton:hover {
+    transform: translateY(-2px); /* Pour simuler l'effet 3D de sortie */
+}
+#downloadButton:active {
+    transform: translateY(2px); /* Lorsque le bouton est enfoncé, revenir à la position normale */
+}
+  #downloadButton a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #DCB253;
+  }
+  
+  #downloadButton img {
+    margin-right: 10px;
+  }
+  
+.closeCv {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 400px;
+    height: 150px;
+    z-index: 10000;
+    background-color: #37806C;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    display: flex;
+    text-align: center;
+}
+.closeCv button{
+    color: #DCB253;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.closeCv img {
+    margin-right: 10px;
+  }
+.closeCv:hover {
+    transform: translateY(-2px); /* Pour simuler l'effet 3D de sortie */
+}
+.closeCv:active {
+    transform: translateY(2px); /* Lorsque le bouton est enfoncé, revenir à la position normale */
+}
+@media screen and (min-width: 1024px) {
+
+    #downloadButton {
+        top: 10px;
+        width: 285px;
+        height: 84px;
+    }
+    .closeCv{
+        width: 285px;
+        height: 84px;
+    }
+
+    .bubble {
+        --r: 55px; /* the radius */
+        --t: 30px; /* the size of the tail */
+        
+        max-width: 100%;
+        padding: calc(2*var(--r)/3);
+        -webkit-mask: 
+            radial-gradient(var(--t) at var(--_d) 0,#0000 98%,#000 102%) 
+            var(--_d) 100%/calc(100% - var(--r)) var(--t) no-repeat,
+            conic-gradient(at var(--r) var(--r),#000 75%,#0000 0) 
+            calc(var(--r)/-2) calc(var(--r)/-2) padding-box, 
+            radial-gradient(50% 50%,#000 98%,#0000 101%) 
+            0 0/var(--r) var(--r) space padding-box;
+        background: linear-gradient(315deg,#43b5bd,#2ef0c0) border-box;
+    }
+    .left {
+    --_d: 0%;
+    border-left: var(--t) solid #0000;
+    margin-right: var(--t);
+    place-self: start;
+    color: black;
+    }
+    .hub{
+        background-image: url(../media/img/cabin_captain.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-color: #000;
+    }
+    .cabin{
+        display: block;
+        width: 100%;
+        margin: auto;
+        background-image: url(../media/img/captain_hub.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .cabin i{
+        font-size: 30px;
+    }
+    .hub h2{
+        margin: 10px;
+    }
+    .bckg_cv{
+        color: #DCB253;
+    }
+    .contain_block{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1%;
+    }
+    .zoom {
+        transition: transform .2s; /* Animation */
+        width: 40%;
+      }
+      
+    .zoom:hover {
+        transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+}

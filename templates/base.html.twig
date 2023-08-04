@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        {% block stylesheets %}
+        <link rel="stylesheet" href="/public/assets/css/header.css">
+        <link rel="stylesheet" href="/public/assets/css/footer.css">
+        <link rel="stylesheet" href="/public/assets/css/homepage.css">
+        <link rel="stylesheet" href="/public/assets/css/cv.css">
+        {% endblock %}
+
+        {% block javascripts %}
+        <script src="/public/assets/JS/index.js"></script>
+        {% endblock %}
+
+        <link rel="shortcut icon" type="image/png" href="/public/assets/media/img/Ne3ko_favicon.png"/>
+    </head>
+    <body>
+        {% block body %}
+
+        {% endblock %}
+    </body>
+</html>

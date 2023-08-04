@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pont du navire{% endblock %}
+
+{% block body %}
+
+{% include "header.html.twig" %}
+
+<main class="pont">
+    <div class="appel">
+        <h1>Ohé gouverneur, par ici !</h1>
+        <h2>Corsaire et capitaine Ne3ko prêt à vous embarquer pour l'îlot aux trésors !</h2>
+    </div>
+
+    <h2>On lève les amarres, hissez ho !</h2>
+    <p class="desktop-only">
+        Mes hommes vont vous conduire, suivez-les bien que ces forbans n'aillent pas se saouler en vous laissant dans un coin
+    </p>
+    <p class="mobile-only">
+        Mes hommes t'ont laissé les cartes de voyage au sein du Black Tide, hésite pas à faire un tour le temps qu'on quitte le port
+    </p>
+
+    <div class="contain">
+        <a href="{{ path('app_cv') }}" class="aCard">
+            <div class="card" id="portfolio">
+                <b class="black"></b>
+                <b class="tresormap"></b>
+                <div class="content">
+                    <ul>
+                        <li>Curriculum Vitae /</li>
+                    </ul>
+                    <h3 class="title"><span>La cabine du capitaine</span></h3>
+                    <h4><span>Pour le bon rhum, les trésors et les avis de recherche...</span></h4>
+                    <p><span>
+                        Un peu de grog, un chat ronronnant sur le bureau au milieu de documents, un téléscope pointant vers la lune et
+                        une boussole en miettes au sol.
+                        Au beau milieu de cette ambiance, on peut y apercevoir un avis de recherche...
+                    </span>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <img src="/public/assets/media/img/Pirate rightside.png" alt="Figurine capitaine en second pointant la gauche" class="equipage">
+    </div>
+
+    <div class="contain">
+        <img src="/public/assets/media/img/Pirate leftside.png" alt="Figurine capitaine en second pointant la droite" class="equipage">
+        <a href="{{ path('app_portfolio') }}" class="aCard">
+            <div class="card" id="cv">
+                <b class="black"></b>
+                <b class="tresormap"></b>
+                    <div class="content">
+                        <ul>
+                            <li>Portfolio /</li>
+                        </ul>
+                        <h3 class="title"><span>Fond de la cale</span></h3>
+                        <h4><span>Pour les grands éplucheurs de patates...</span></h4>
+                        <p><span>Yo-Oh, c'est ici qu'on garde nos stocks. Le cuisinier doit être en train de pioncer mais faites donc un tour, 
+                            ce navire est à vous ! 
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="contain">
+        <a href="{{ path('app_decouvre_moi') }}" class="aCard">
+            <div class="card" id="bonus">
+                <b class="black"></b>
+                <b class="tresormap"></b>
+                <div class="content">
+                    <ul>
+                        <li>L'îlot aux trésors... Enfin ! /</li>
+                        <i>Si tu veux en savoir plus sur mes hobbies, passions... Viens découvrir les trésors</i>
+                    </ul>
+                    <h3 class="title"><span>Les fonds marins</span></h3>
+                    <h4><span>Pour les damnés, les créatures et les trésors...</span></h4>
+                    <p><span>
+                        Encore hier on a perdu un de nos hommes gouverneur, le capitaine pense que le bougre avait trop bu,
+                        et s'est fait happer par le chant d'une sirène, la bouteille à la main ! 
+                    </span>
+                    </p>
+                </div>
+            </div>
+        </a>        
+        <img src="/public/assets/media/img/Pirate botside.png" alt="Figurine capitaine en second pointant le bas" class="equipage">
+    </div>
+</main>
+
+{% include "footer.html.twig" %}
+
+{% endblock %}
