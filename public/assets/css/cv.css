@@ -111,13 +111,19 @@
     width: 400px;
     height: 150px;
     text-align: center;
-}
-#downloadButton:hover {
-    transform: translateY(-2px); /* Pour simuler l'effet 3D de sortie */
-}
-#downloadButton:active {
-    transform: translateY(2px); /* Lorsque le bouton est enfoncé, revenir à la position normale */
-}
+    display: flex; /* Add flex display to create a flex container */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+  }
+  
+  #downloadButton:hover {
+    transform: translateY(-2px);
+  }
+  
+  #downloadButton:active {
+    transform: translateY(2px);
+  }
+  
   #downloadButton a {
     display: flex;
     align-items: center;
